@@ -1,0 +1,32 @@
+server:
+  port: 8969
+spring:
+  application:
+    name: client-admin-client
+  boot:
+    admin:
+      client:
+        prefer-ip: true  #解决window下无法识别主机名的问题
+  security:
+    user:
+      name: "client"
+      password: "client"
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
+  client:
+    registryFetchIntervalSeconds: 5
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS

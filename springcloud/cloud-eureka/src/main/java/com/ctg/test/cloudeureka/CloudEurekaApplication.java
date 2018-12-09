@@ -6,9 +6,11 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  *  打开spring eureka界面:http://localhost:8761/
+ *
  */
 @SpringBootApplication
 @EnableEurekaServer//注册中心
+
 public class CloudEurekaApplication {
 
     public static void main(String[] args) {
