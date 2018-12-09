@@ -19,19 +19,25 @@
 > 6zipkin原理：在服务调用的请求和响应中加入ID,表明上下游请求的关系。利用这些信息，可以可视化地分析服务调用链路和服务间的依赖关系
 >
 > 7.admin服务监控界面
->
-> 
->
+
+
+
 > 1.cloud-eureka:发现、注册服务
+
 > 2.cloud-service:提供服务
+
 > 3.cloud-ribbon；客户端
+
 > 4.cloud-fegin：客户端，Feign封装了HTTP调用服务方法，使得客户端像调用本地方法那样直接调用方法
+
 > 5.cloud-zuul：zuul网关
+
 > 6.cloud-config-server:配置中心服务端(git为例)
+
 > 7.cloud-config-client:获取配置的接口
->
+
 > 8.cloud-fegin2：测试turibne聚合hystrix信息;测试zipkin调用链跟踪
->
+
 > 9.cloud-admin-web:admin监控服务端，利用eureka注册中心，也是一个微服务
->
+
 > 10.cloud-admin-client:admin监控客户端
